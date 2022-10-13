@@ -9,14 +9,13 @@ import { PostService } from '../services/post.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  posts: Observable<Array<PostPayload>>;
-  j  = false;
-  constructor(private postService: PostService) { }
 
+  posts: Observable<Array<PostPayload>>;
+
+  constructor(private postService: PostService) { }
   
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
     this.getAllPost();
   }
   getAllPost():void{
